@@ -28,7 +28,7 @@ setup(
               'probabilistic', 'set'),
     author="Berkay Dinçer",
     author_email="dincerbberkay@gmail.com",
-    url="",
+    url="https://github.com/berkay-dincer/bloompy",
     license="MIT License",
     platforms=['any'],
     zip_safe=True,
