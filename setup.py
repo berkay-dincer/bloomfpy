@@ -2,16 +2,16 @@
 from setuptools import setup
 
 VERSION = '1.0.0'
-DESCRIPTION = "bloompy: Bloom Filter implementation for python, a probabilistic data structure"
+DESCRIPTION = "bloomfpy: Bloom Filter implementation for python, a probabilistic data structure"
 LONG_DESCRIPTION = """
-bloompy is a bloom filter implemented in python, bloom filters are probabilistic data structures with sub linear space requirements.
+bloomfpy is a bloom filter implemented in python, bloom filters are probabilistic data structures with sub linear space requirements.
 """
 
 CLASSIFIERS = filter(None, map(str.strip,
 """
 Intended Audience :: Developers
 License :: OSI Approved :: MIT License
-Programming Language :: Python :: 3",
+Programming Language :: Python :: 3.7
 Operating System :: OS Independent
 Topic :: Utilities
 Topic :: Database :: Database Engines/Servers
@@ -19,7 +19,7 @@ Topic :: Software Development :: Libraries :: Python Modules
 """.splitlines()))
 
 setup(
-    name="bloompy",
+    name="bloomfpy",
     version=VERSION,
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
@@ -33,5 +33,5 @@ setup(
     platforms=['any'],
     zip_safe=True,
     install_requires=['bitarray>=1.1.0'],
-    packages=['bloompy']
+    packages=['bloomfpy']
 )

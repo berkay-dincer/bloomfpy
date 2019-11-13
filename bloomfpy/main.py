@@ -1,4 +1,4 @@
-from bloompy import BloomFilter
+from bloomfpy import BloomFilter
 from uuid import uuid4
 
 g = BloomFilter(capacity=100)
