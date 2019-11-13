@@ -1,4 +1,4 @@
-# bloompy
+# bloomfpy
 A probabilistic data structure called Bloom Filter implemented in python. 
 
 Bloom Filters are very efficient data structures built for set membership problems. They take sublinear memory space with O(k) complexity for inserting and checking membership.
