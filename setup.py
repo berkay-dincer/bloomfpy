@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from setuptools import setup
 
-VERSION = '1.0.1'
+VERSION = '1.1.0'
 DESCRIPTION = "bloomfpy: Bloom Filter implementation for python, a probabilistic data structure"
 LONG_DESCRIPTION = """
 bloomfpy is a bloom filter implemented in python, bloom filters are probabilistic data structures with sub linear space requirements.

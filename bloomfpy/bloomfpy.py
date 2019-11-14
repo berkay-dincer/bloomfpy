@@ -57,3 +57,29 @@ class BloomFilter(object):
             self.bitarray[idx] = True
 
         self.count += 1
+
+
+class ScalableBloomFilter(object):
+
+    def __init__(self, capacity, error_rate=0.001, scale_at=0.5):
+        self.filters = [BloomFilter(capacity=capacity, error_rate=error_rate)]
+        self.count = 0
+        self.scale_at = scale_at
+
+    def __contains__(self, key):
+        for bloomFilter in reversed(self.filters):
+            if key in bloomFilter:
+                return True
+        return False
+
+    def add(self, key):
+        active_filter = self.filters[-1]
+        if active_filter.count >= self.scale_at*active_filter.capacity:
+            new_filter = BloomFilter(capacity=active_filter.capacity)
+            self.filters.append(new_filter)
+            active_filter = new_filter
+        active_filter.add(key)
+        self.count += 1
+
+    def __len__(self):
+        return self.count

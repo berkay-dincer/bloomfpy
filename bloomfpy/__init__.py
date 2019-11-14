@@ -1,1 +1,1 @@
-from .bloomfpy import BloomFilter
+from .bloomfpy import BloomFilter, ScalableBloomFilter
