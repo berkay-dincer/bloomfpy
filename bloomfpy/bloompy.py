@@ -38,15 +38,15 @@ class BloomFilter(object):
         return self.count
 
     def _hash_value(self, key, salt):
-        hashfunc = hashlib.sha1()
+        hashfunc = hashlib.sha256()
         if isinstance(key, str):
             key = key.encode('utf-8')
         else:
             key = str(key).encode('utf-8')
 
         hashfunc.update(key + salt.bytes)
-        for idx in hashfunc.digest():
-            return idx % self.num_bits
+        uint = int.from_bytes(hashfunc.digest(), "little")
+        return uint % self.num_bits
 
     def add(self, key):
         if self.count > self.capacity:
