@@ -1,1 +1,1 @@
-from .bloompy import BloomFilter
+from .bloomfpy import BloomFilter
