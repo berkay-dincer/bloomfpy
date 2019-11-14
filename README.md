@@ -10,6 +10,8 @@ This implementation calculates the `k` (# of hash functions) and `m` (# of bits)
 
 # Usage: 
 
+For a non-scalable bloom filter:
+
 ```
 >>> from bloomfpy import BloomFilter
 
@@ -25,6 +27,29 @@ True
 1
 
 ```
+
+For a scalable floom filter:
+
+```
+>>> from bloomfpy import ScalableBloomFilter
+
+>>> s = ScalableBloomFilter(capacity=5, scale_at=0.5) # scale this bloom filter when it is half full
+
+>>> s.add(1)
+>>> s.add(2)
+>>> s.add(3) # at this point BloomFilter is scaled
+
+>>> print(1 in s)
+True
+
+>>> print(3 in s)
+True
+
+>>> print(100 in s)
+False
+
+```
+
 # Installation:
 
 bloomfpy is available via pypi:
