@@ -28,12 +28,6 @@ True
 
 ```
 
-# Choosing Parameters:
-
-Use the following website to choose and understand the consequences of picking faulty parameters.
-
-https://hur.st/bloomfilter/?n=120000&p=1.0E-5&m=&k=
-
 For a scalable floom filter:
 
 ```
@@ -55,6 +49,12 @@ True
 False
 
 ```
+
+# Choosing Parameters:
+
+Use the following website to choose and understand the consequences of picking faulty parameters.
+
+https://hur.st/bloomfilter/?n=120000&p=1.0E-5&m=&k=
 
 # Installation:
 
