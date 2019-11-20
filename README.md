@@ -3,7 +3,7 @@ A probabilistic data structure called Bloom Filter implemented in python with sc
 
 Bloom Filters are very efficient data structures built for set membership problems. They take sublinear memory space with O(k) complexity for inserting and checking membership.
 
-This implementation calculates the `k` (# of hash functions) and `m` (# of bits) from a given `m` (capacity) and `p` (error_rate):
+This implementation calculates the `k` (# of hash functions) and `m` (# of bits) from a given `n` (capacity) and `p` (error_rate):
 
 - m = ceil((n * log(p)) / log(1 / pow(2, log(2))))
 - k = round((m / n) * log(2))
@@ -27,6 +27,12 @@ True
 1
 
 ```
+
+# Choosing Parameters:
+
+Use the following website to choose and understand the consequences of picking faulty parameters.
+
+https://hur.st/bloomfilter/?n=120000&p=1.0E-5&m=&k=
 
 For a scalable floom filter:
 
